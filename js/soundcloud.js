@@ -4,12 +4,6 @@ SC.initialize({
 });
 
 $(document).ready(function() {
-  SC.get('/tracks', { genres: 'foo' }, function(tracks) {
-    $(tracks).each(function(index, track) {
-      $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
-    });
-  });
-
   $('a.connect').click(function(e) {
     e.preventDefault();
     SC.connect(function(){
@@ -19,4 +13,18 @@ $(document).ready(function() {
     });
     
   });
+});
+
+$('button').click(function(){
+	event.preventDefault();
+	$genre = $('#search-term').val();
+	SC.get('/tracks', { genres: $genre }, function(tracks) {
+	console.log(tracks);
+
+	$('#results').html('');
+    $(tracks).each(function(index, track) {
+      $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
+    });
+
+})
 });

@@ -10,7 +10,7 @@
 
     <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
 
-    <title>Social Network Aggregator</title>
+    <title>Favr</title>
 
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,9 +18,6 @@
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/starter-template/starter-template.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./asdf_files/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -29,6 +26,9 @@
     <![endif]-->
 
     <link href="css/extra.css" type="text/css" rel="stylesheet">
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
+    
+
 
 
   </head>
@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="./index.html">Stumblr</a>
+          <a class="navbar-brand" href="./index.html">Favr</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -59,30 +59,39 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1>Stumblr</h1>
-        <p class="lead">Dis be our first hackathon project. Tumblr post aggregator based on keywords you search below.</p>
+        <h1>Favr</h1>
+        <p class="lead">Dis be our first hackathon project. Soundcloud post aggregator based on keywords you search below.</p>
         <div id="searchbar" class="col-sm-3 col-md-3 pull-right">
           <form class="navbar-form" role="search">
           <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+              <input type="text" class="form-control" placeholder="Search by Genre" name="search-term" id="search-term">
               <div class="input-group-btn">
                   <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
               </div>
           </div>
           </form>
+          <a href="#" class="connect">Connect with SoundCloud</a>
         </div>
       </div>
 
     </div><!-- /.container -->
 
+    <ul id="results">
+            
+    </ul>
+
+    <div id="player">
+    </div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./asdf_files/jquery.min.js"></script>
-    <script src="./asdf_files/bootstrap.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./asdf_files/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="js/soundcloud.js"></script>
 
   
 
