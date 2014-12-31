@@ -13,18 +13,26 @@ $(document).ready(function() {
     });
     
   });
-});
-
-$('button').click(function(){
-	event.preventDefault();
-	$genre = $('#search-term').val();
-	SC.get('/tracks', { genres: $genre }, function(tracks) {
-	console.log(tracks);
-
-	$('#results').html('');
-    $(tracks).each(function(index, track) {
-      $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
+  $('#results').append(
+    var track_url = 'http://soundcloud.com/forss/flickermood';
+    SC.oEmbed(track_url, { auto_play: true }, function(oEmbed) {
+      console.log('oEmbed response: ' + oEmbed);
     });
 
-})
 });
+
+// $('button').click(function(){
+// 	event.preventDefault();
+// 	$genre = $('#search-term').val();
+// 	SC.get('/tracks', { genres: $genre }, function(tracks) {
+// 	console.log(tracks);
+
+// 	$('#results').html('');
+//     $(tracks).each(function(index, track) {
+//       $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
+//     });
+
+
+// })
+// });
+
